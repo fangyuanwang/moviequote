@@ -1,13 +1,33 @@
 <!--The whole content below can be removed with the new code.-->
+<nav class="navbar navbar-inverse">
+  <div class="container">
+    <h1>
+      Movie Quotes
+    </h1>
+  </div>
+</nav>
 
-<h1>
-  Movie Quotes
-</h1>
-<input type="text" placeholder="Quote" name="quote" [(ngModel)]="movieQuote.quote">
-<br>
-<input type="text" placeholder="from Movie" name="movie" [(ngModel)]="movieQuote.movie">
+<div class="container">
+  <div class="well well-lg">
+    <form>
+      <div class="form-group">
+        <label for=""></label>
+        <input class="form-control" type="text" placeholder="Quote" name="quote" [(ngModel)]="movieQuote.quote">
+      </div>
 
-<p *ngIf="movieQuote.movie && movieQuote.quote">
-  The best quote from <b>{{movieQuote.movie}}</b> is <b>"{{movieQuote.quote}}"</b>.
-</p>
+      <br>
+      <div class="form-group">
+        <label for=""></label>
+        <input type="text"  class="form-control" placeholder="from Movie" name="movie" [(ngModel)]="movieQuote.movie">
+      </div>
 
+      <p *ngIf="movieQuote.movie && movieQuote.quote">
+        The best quote from <b>{{movieQuote.movie}}</b> is <b>"{{movieQuote.quote}}"</b>.
+      </p>
+
+      <button type="button" class="btn btn-default pull-right"
+      (click)="onSubmit()">Submit</button>
+      <div class="clearfix"></div>
+    </form>
+  </div>
+</div>
