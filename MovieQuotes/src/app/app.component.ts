@@ -18,5 +18,9 @@ export class AppComponent {
 
   onSubmit(): void {
     console.log("submit", this.movieQuote);
+    this.movieQuote = {
+      'movie': '',
+      'quote': ''
+    };
   }
 }
