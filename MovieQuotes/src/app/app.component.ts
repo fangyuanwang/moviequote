@@ -26,13 +26,13 @@ export class AppComponent {
   // ];
 
   movieQuotesStream: FirebaseListObservable<MovieQuote[]>;
-  constructor(db: AngularFireDatabase) { 
+  constructor(db: AngularFireDatabase) {
     this.movieQuotesStream = db.list('/quotes');
 
   }
 
   onSubmit(): void {
-    //local solution
+    // local solution
     // this.movieQuotes.unshift(this.formMovieQuote);
     try {
       if (this.formMovieQuote.$key) {
@@ -46,7 +46,7 @@ export class AppComponent {
         'quote': ''
       };
     } catch (e) {
-      console.log("Form error");
+      console.log('Form error');
     }
   }
 
