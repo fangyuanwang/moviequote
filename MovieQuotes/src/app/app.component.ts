@@ -26,7 +26,7 @@ export class AppComponent {
   // ];
 
   movieQuotesStream: FirebaseListObservable<MovieQuote[]>;
-  constructor(db: AngularFireDatabase) {
+  constructor(db: AngularFireDatabase) { 
     this.movieQuotesStream = db.list('/quotes');
 
   }
